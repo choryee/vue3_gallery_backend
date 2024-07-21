@@ -16,7 +16,7 @@ public class ItemController {
     ItemRepository itemRepository;
 
     @GetMapping("/api/items")
-    public List<Item> getItems(){
+    public List<Item> getItems(){ // 첫화면에서 data뿌리기
         List<Item> items = itemRepository.findAll();
 
 //        List<String> items=new ArrayList<>();
