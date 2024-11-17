@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 // db의 item table과 연동하려로
 @Table(name = "orders")
 @Getter
@@ -33,6 +36,9 @@ public class Order { //42'00
 
     @Column(length = 500, nullable = false)
     private String items;
+
+    @Column(length = 500)
+    private LocalDateTime reg_date;
 
 
 }

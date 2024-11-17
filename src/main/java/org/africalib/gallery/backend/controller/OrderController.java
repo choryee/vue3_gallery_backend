@@ -66,6 +66,7 @@ public class OrderController {
         newOrder.setCardNumber(dto.getCardNumber());
         newOrder.setPayment(dto.getPayment());
         newOrder.setItems(dto.getItems());
+        newOrder.setReg_date(dto.getReg_date());
 
         orderRepository.save(newOrder );
 

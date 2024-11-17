@@ -3,7 +3,9 @@ package org.africalib.gallery.backend.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 
-// db의 item table과 연동하려로
+import java.time.LocalDateTime;
+
+// db의 members table과 연동하려로
 @Table(name = "members")
 @Getter
 @Entity
@@ -19,6 +21,9 @@ public class Member { //01'27'00
 
     @Column(length = 100, nullable = false)
     private String password; // img_path 컬럼명도 매칭됨.
+
+    @Column(length = 100)
+    private LocalDateTime reg_date;
 
 
 

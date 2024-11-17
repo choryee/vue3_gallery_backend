@@ -18,13 +18,20 @@ repositories {
 }
 
 dependencies {
+	//implementation 'mysql:mysql-connector-java'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+	// 에러나면, 이것 풀고. 밑에것 주석. 바뀌가면서.1027. readme.txt보라.
+	implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.3'
+	//runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+	//implementation 'org.hibernate:hibernate-core:6.5.2.Final'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
 
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
 	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
